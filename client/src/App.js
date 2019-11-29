@@ -4,6 +4,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
 import MovieList from './components/MovieList'
+import AddMovie from './components/AddMovie'
 
 const client = new ApolloClient({
   uri: 'http://localhost:5000/graphql',
@@ -13,7 +14,7 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <div className="App">
-        <h2>REACT WITH GRAPHQL</h2>
+        <AddMovie/>
         <MovieList/>
       </div>
     </ApolloProvider>
